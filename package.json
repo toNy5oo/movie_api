@@ -1,28 +1,33 @@
 {
-  "name": "movie_api",
-  "version": "1.0.0",
-  "description": "Allows to fetch movies searching from actor",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/toNy5oo/movie_api.git"
-  },
-  "keywords": [
-    "movie",
-    "kino"
-  ],
-  "author": "Ciro Bozza",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/toNy5oo/movie_api/issues"
-  },
-  "homepage": "https://github.com/toNy5oo/movie_api#readme",
-  "dependencies": {
-    "body-parser": "^1.19.2",
-    "express": "^4.17.3",
-    "morgan": "^1.10.0"
-  }
+    "name": "movie_api",
+    "version": "1.0.0",
+    "description": "Allows to fetch movies searching from actor",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "run": "node index.js",
+        "dev": "nodemon index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/toNy5oo/movie_api.git"
+    },
+    "keywords": [
+        "movie",
+        "kino"
+    ],
+    "author": "Ciro Bozza",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/toNy5oo/movie_api/issues"
+    },
+    "homepage": "https://github.com/toNy5oo/movie_api#readme",
+    "dependencies": {
+        "body-parser": "^1.19.2",
+        "express": "^4.17.3",
+        "morgan": "^1.10.0"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.15"
+    }
 }
