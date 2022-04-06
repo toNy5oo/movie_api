@@ -92,9 +92,9 @@
         <div class="grid">
             <p>Allow users to add a movie to their list of favorites (showing only a text that a movie has been added—more on this later)</p>
             <p>/users/:user/favourites</p>
-            <p>PUT</p>
+            <p>POST</p>
             <p>None</p>
-            <p>None</p>
+            <p>JSON object holding information about the movie to add to the favourite list<br> { "title": "Title of the movie", "director": "Name of the director", "genre": "Genre of the movie" }</p>
             <p>A text message indicating success</p>
         </div>
 

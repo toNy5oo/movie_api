@@ -102,3 +102,4 @@
 127.0.0.1 - - [06/Apr/2022:12:41:28 +0000] "POST /users/asd/favourites HTTP/1.1" 201 35 "-" "PostmanRuntime/7.29.0"
 127.0.0.1 - - [06/Apr/2022:12:41:34 +0000] "DELETE /users/asd/favourites HTTP/1.1" 200 41 "-" "PostmanRuntime/7.29.0"
 127.0.0.1 - - [06/Apr/2022:12:42:41 +0000] "DELETE /users HTTP/1.1" 200 21 "-" "PostmanRuntime/7.29.0"
+127.0.0.1 - - [06/Apr/2022:13:15:37 +0000] "GET /movies HTTP/1.1" 200 700 "-" "PostmanRuntime/7.29.0"

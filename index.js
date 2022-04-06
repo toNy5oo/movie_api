@@ -81,7 +81,7 @@ app.get('/movies/:title/details', (req, res) => {
     let movie = dataJSON.find((movie) => { return movie.title === req.params.title; });
 
     if (movie) {
-        console.log('Movie found: ' + movie.title);
+        //console.log('Movie found: ' + movie.title);
         res.send(movie.genre);
     } else
         res.send('Movie not found');
