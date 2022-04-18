@@ -7,6 +7,7 @@ const moviesRoutes = require('./routes/movies'),
     bodyParser = require('body-parser'),
     mongoose = require('mongoose'),
     express = require('express'),
+    cors = require('cors'),
     app = express();
 
 const hostname = '127.0.0.1';
@@ -18,8 +19,12 @@ const accessLogStream = fs.createWriteStream(path.join(__dirname, 'log.txt'), { 
 //DB CONNECTION
 mongoose.connect('mongodb://localhost:27017/myFlixDB', { useNewUrlParser: true, useUnifiedTopology: true });
 
+//Parsing Object als Json in Body
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+//Cross-Origin Resource Sharing
+app.use(cors());
 
 //Passport strategy required
 let auth = require('./auth')(app);
@@ -34,6 +39,24 @@ app.use(morgan('combined', { stream: accessLogStream }));
 app.use('/movies', moviesRoutes);
 app.use('/users', usersRoutes);
 
+app.use(express.static('public'));
+
+// app.use((err, req, res, next) => {
+//     console.error('Found an error: ' + err.message);
+//     res.status(err.code).send('Error!')
+// });
+
+//Server listening on hostname:port
+app.listen(port, hostname, () => {
+    console.log(`Server running at http://${hostname}:${port}/`);
+})
+
+
+
+
+
+
+// OLD CODE HERE
 
 //______________________  ENDPOINTS
 
@@ -195,20 +218,6 @@ app.use('/users', usersRoutes);
 
 
 //____________ ENDPOINTS
-
-app.use(express.static('public'));
-
-app.use((err, req, res, next) => {
-    console.error('Found an error: ' + err.message);
-    res.status(err.code).send('Error!')
-});
-
-app.listen(port, hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`);
-})
-
-
-
 
 
 

@@ -9,19 +9,67 @@ const Users = Models.User;
 const Genres = Models.Genre;
 const Directors = Models.Director;
 
+const { check, validationResult } = require('express-validator');
+
 require('../passport');
 
-//Retrieve all the users
-router.get('/', passport.authenticate('jwt', { session: false }), (req, res) => {
-    Users.find()
-        .then((users) => {
-            res.status(201).json(users);
-        })
-        .catch((err) => {
-            console.error(err);
-            res.status(500).send('Error: ' + err);
+
+router.route('/', passport.authenticate('jwt', { session: false }))
+    //Retrieve all the users
+    .get((req, res) => {
+        Users.find()
+            .then((users) => {
+                res.status(201).json(users);
+            })
+            .catch((err) => {
+                console.error(err);
+                res.status(500).send('Error: ' + err);
+            });
+    })
+    //Allow new users to register
+    .post((req, res) => {
+
+        //minimum value of 5 characters are only allowed
+        [
+            check('Username', 'Username is required').isLength({ min: 5 }),
+
+            check('Username', 'Username contains non alphanumeric characters - not allowed.').isAlphanumeric(),
+            //is not empty
+            check('Password', 'Password is required').not().isEmpty(),
+            //it is an email address
+            check('Email', 'Email does not appear to be valid').isEmail()
+        ], (req, res) => {
+
+            // check the validation object for errors
+            let errors = validationResult(req);
+
+            if (!errors.isEmpty()) {
+                return res.status(422).json({ errors: errors.array() });
+            }
+        }
+
+        let hashedPassword = Users.hashPassword(req.body.Password);
+        Users.findOne({ Username: req.body.Username }).then((user) => {
+            if (user) {
+                return res.status(400).send(req.body.Username + ' is already registered');
+            } else {
+                Users.create({
+                    Username: req.body.Username,
+                    Password: hashedPassword,
+                    Email: req.body.Email,
+                    Birthday: req.body.Birthday
+                }).then((user) => {
+                    res.status(201).json(user)
+                }).catch((err) => {
+                    console.error(err);
+                    res.status(500).send('Error: ' + err);
+                })
+            }
+        }).catch((err) => {
+            console.error(error);
+            res.status(500).send('Error: ' + error);
         });
-});
+    });
 
 //Retrieve one user by username
 router.get('/:username', passport.authenticate('jwt', { session: false }), (req, res) => {
@@ -33,33 +81,6 @@ router.get('/:username', passport.authenticate('jwt', { session: false }), (req,
             console.error(err);
             res.status(500).send('Error: ' + err);
         });
-});
-
-
-//Allow new users to register
-router.post('/register', (req, res) => {
-
-    Users.findOne({ Username: req.body.Username }).then((user) => {
-        if (user) {
-            return res.status(400).send(req.body.Username + ' is already registered');
-        } else {
-            Users.create({
-                Username: req.body.Username,
-                Password: req.body.Password,
-                Email: req.body.Email,
-                Birthday: req.body.Birthday
-            }).then((user) => {
-                res.status(201).json(user)
-            }).catch((err) => {
-                console.error(err);
-                res.status(500).send('Error: ' + err);
-            })
-        }
-    }).catch((err) => {
-        console.error(error);
-        res.status(500).send('Error: ' + error);
-    });
-
 });
 
 //Allow users to update their user info (username)
