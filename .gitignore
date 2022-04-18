@@ -1,5 +1,6 @@
 #Folders to ignore
 node_modules/
+log.txt
 
 
 ## Ignore Visual Studio temporary files, build results, and
