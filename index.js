@@ -11,7 +11,7 @@ const moviesRoutes = require('./routes/movies'),
     app = express();
 
 const hostname = '127.0.0.1';
-const port = 8080;
+const port = process.env.PORT || 8080;
 
 //ACCESS TO FS LOG.TXT
 const accessLogStream = fs.createWriteStream(path.join(__dirname, 'log.txt'), { flags: 'a' });
