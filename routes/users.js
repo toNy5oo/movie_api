@@ -14,9 +14,9 @@ const { check, validationResult } = require('express-validator');
 require('../passport');
 
 
-router.route('/', passport.authenticate('jwt', { session: false }))
+router.route('/')
     //Retrieve all the users
-    .get((req, res) => {
+    .get(passport.authenticate('jwt', { session: false }), (req, res) => {
         Users.find()
             .then((users) => {
                 res.status(201).json(users);
@@ -27,7 +27,7 @@ router.route('/', passport.authenticate('jwt', { session: false }))
             });
     })
     //Allow new users to register
-    .post((req, res) => {
+    .post(passport.authenticate('jwt', { session: false }), (req, res) => {
 
         //minimum value of 5 characters are only allowed
         [
@@ -73,9 +73,9 @@ router.route('/', passport.authenticate('jwt', { session: false }))
 
 
 
-router.route('/:username', passport.authenticate('jwt', { session: false }))
+router.route('/:username')
     //Retrieve one user by username
-    .get((req, res) => {
+    .get(passport.authenticate('jwt', { session: false }), (req, res) => {
         Users.findOne({ Username: req.params.username })
             .then((user) => {
                 res.json(user);
@@ -86,7 +86,7 @@ router.route('/:username', passport.authenticate('jwt', { session: false }))
             });
     })
     //Delete user by username
-    .delete((req, res) => {
+    .delete(passport.authenticate('jwt', { session: false }), (req, res) => {
         Users.findOneAndRemove({ Username: req.params.username })
             .then((user) => {
                 if (!user) {
@@ -121,9 +121,9 @@ router.put('/:username/:newUsername', passport.authenticate('jwt', { session: fa
 });
 
 
-router.route('/:username/favourites/:movieID', passport.authenticate('jwt', { session: false }))
+router.route('/:username/favourites/:movieID')
     // //Allow users to add a movie to their list of favorites (showing only a text that a movie has been added—more on this later)
-    .put((req, res) => {
+    .put(passport.authenticate('jwt', { session: false }), (req, res) => {
         Users.findOneAndUpdate({ Username: req.params.username }, { $addToSet: { FavoriteMovies: req.params.movieID } }, { new: true },
             (err, updatedUser) => {
                 if (err) {
@@ -135,7 +135,7 @@ router.route('/:username/favourites/:movieID', passport.authenticate('jwt', { se
             });
     })
     // //Allow users to remove a movie from their list of favorites (showing only a text that a movie has been removed)
-    .delete((req, res) => {
+    .delete(passport.authenticate('jwt', { session: false }), (req, res) => {
         Users.findOneAndUpdate({ Username: req.params.username }, { $pull: { FavoriteMovies: req.params.movieID } })
             .then((updatedUser) => {
                 Movies.findOne({ _id: req.params.movieID }).then((movie => {
