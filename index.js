@@ -52,10 +52,6 @@ app.listen(port, hostname, () => {
 })
 
 
-
-
-
-
 // OLD CODE HERE
 
 //______________________  ENDPOINTS

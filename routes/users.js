@@ -71,17 +71,35 @@ router.route('/', passport.authenticate('jwt', { session: false }))
         });
     });
 
-//Retrieve one user by username
-router.get('/:username', passport.authenticate('jwt', { session: false }), (req, res) => {
-    Users.findOne({ Username: req.params.username })
-        .then((user) => {
-            res.json(user);
-        })
-        .catch((err) => {
-            console.error(err);
-            res.status(500).send('Error: ' + err);
-        });
-});
+
+
+router.route('/:username', passport.authenticate('jwt', { session: false }))
+    //Retrieve one user by username
+    .get((req, res) => {
+        Users.findOne({ Username: req.params.username })
+            .then((user) => {
+                res.json(user);
+            })
+            .catch((err) => {
+                console.error(err);
+                res.status(500).send('Error: ' + err);
+            });
+    })
+    //Delete user by username
+    .delete((req, res) => {
+        Users.findOneAndRemove({ Username: req.params.username })
+            .then((user) => {
+                if (!user) {
+                    res.status(400).send(req.params.username + ' was not found.');
+                } else {
+                    res.status(200).send(req.params.username + ' was deleted.');
+                }
+            }).catch((err => {
+                console.error(err);
+                res.status(500).send('Error ' + err);
+
+            }));
+    });
 
 //Allow users to update their user info (username)
 router.put('/:username/:newUsername', passport.authenticate('jwt', { session: false }), (req, res) => {
@@ -128,22 +146,5 @@ router.route('/:username/favourites/:movieID', passport.authenticate('jwt', { se
                 res.status(500).send('Error ' + err);
             });
     });
-
-
-//Allow existing users to deregister (showing only a text that a user email has been removed—more on this later)
-router.delete('/:username', passport.authenticate('jwt', { session: false }), (req, res) => {
-    Users.findOneAndRemove({ Username: req.params.username })
-        .then((user) => {
-            if (!user) {
-                res.status(400).send(req.params.username + ' was not found.');
-            } else {
-                res.status(200).send(req.params.username + ' was deleted.');
-            }
-        }).catch((err => {
-            console.error(err);
-            res.status(500).send('Error ' + err);
-
-        }));
-});
 
 module.exports = router;

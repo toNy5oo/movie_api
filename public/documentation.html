@@ -212,7 +212,7 @@
                                 <p>Response Body data</p>
                             </div>
                             <div class="col-7 my-3">
-                                <p>/users/register</p>
+                                <p>/users</p>
                                 <p>POST</p>
                                 <p>JSON object containing the following values:
                                     <code>
@@ -234,151 +234,6 @@
                     </div>
                 </div>
             </div>
-
-
-
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="panelsStayOpen-heading5b">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse5b" aria-expanded="false" aria-controls="panelsStayOpen-collapse5b">
-                        Retrieve all existing users
-            </button>
-                </h2>
-                <div id="panelsStayOpen-collapse5b" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading5b">
-                    <div class="accordion-body">
-                        <div class="row text-center justify-content-center">
-                            <div class="col-3">
-                                <p>URL</p>
-                                <p>HTTP Method</p>
-                                <p>Request Body data</p>
-                                <p>Response Body data</p>
-                            </div>
-                            <div class="col-7">
-                                <p>/users</p>
-                                <p>GET</p>
-                                <p>None</p>
-                                <p>JSON object holding data about every user: <br>Array of: <code>{ _id: Number, Username: String, Password: String, Email: String, Birthday: Date, FavoriteMovies: [ref_id: 'Movies'] }</code></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="panelsStayOpen-heading5c">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse5c" aria-expanded="false" aria-controls="panelsStayOpen-collapse5c">
-                        Retrieve data about one user by username
-            </button>
-                </h2>
-                <div id="panelsStayOpen-collapse5c" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading5c">
-                    <div class="accordion-body">
-                        <div class="row text-center justify-content-center">
-                            <div class="col-3">
-                                <p>URL</p>
-                                <p>HTTP Method</p>
-                                <p>Request Body data</p>
-                                <p>Response Body data</p>
-                            </div>
-                            <div class="col-7">
-                                <p>/users/:username</p>
-                                <p>GET</p>
-                                <p>None</p>
-                                <p>JSON object holding data about one user: <br><code>{ _id: Number, Username: String, Password: String, Email: String, Birthday: Date, FavoriteMovies: [ref_id: 'Movies'] }</code></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="panelsStayOpen-heading6">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse6" aria-expanded="false" aria-controls="panelsStayOpen-collapse6">
-                        Allow users to update their user info (username, password, email, date of birth)
-            </button>
-                </h2>
-                <div id="panelsStayOpen-collapse6" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading6">
-                    <div class="accordion-body">
-                        <div class="row text-center justify-content-center">
-                            <div class="col-3">
-                                <p>URL</p>
-                                <p>HTTP Method</p>
-                                <p>Request Body data</p>
-                                <p>Response Body data</p>
-                            </div>
-                            <div class="col-7">
-                                <p>/users/:username/:newUsername</p>
-                                <p>PUT</p>
-                                <p>None</p>
-                                <p>JSON object holding data about the updated user: <br><code>{ _id: Number, Username: String, Password: String, Email: String, Birthday: Date, FavoriteMovies: [ref_id: 'Movies'] }</code>}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="panelsStayOpen-heading7">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse7" aria-expanded="false" aria-controls="panelsStayOpen-collapse7">
-                        Allow users to add a movie to their list of favorites
-            </button>
-                </h2>
-                <div id="panelsStayOpen-collapse7" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading7">
-                    <div class="accordion-body">
-                        <div class="row text-center justify-content-center">
-                            <div class="col-3">
-                                <p>URL</p>
-                                <p>HTTP Method</p>
-                                <p>Request Body data</p>
-                                <p>Response Body data</p>
-                            </div>
-                            <div class="col-7">
-                                <p>/users/:username/:newUsername</p>
-                                <p>PUT</p>
-                                <p>None</p>
-                                <p>None</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="panelsStayOpen-heading8">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse8" aria-expanded="false" aria-controls="panelsStayOpen-collapse8">
-                        Allow users to remove a movie from their list of favorites
-            </button>
-                </h2>
-                <div id="panelsStayOpen-collapse8" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading8">
-                    <div class="accordion-body">
-                        <div class="row text-center justify-content-center">
-                            <div class="col-3">
-                                <p>URL</p>
-                                <p>HTTP Method</p>
-                                <p>Request Body data</p>
-                                <p>Response Body data</p>
-                            </div>
-                            <div class="col-7">
-                                <p>/users/:username/:newUsername</p>
-                                <p>DELETE</p>
-                                <p>None</p>
-                                <p>None</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
 
             <div class="accordion-item">
                 <h2 class="accordion-header" id="panelsStayOpen-heading9">
@@ -406,6 +261,153 @@
                 </div>
             </div>
         </div>
+
+
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-heading5b">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse5b" aria-expanded="false" aria-controls="panelsStayOpen-collapse5b">
+                        Retrieve all existing users
+            </button>
+            </h2>
+            <div id="panelsStayOpen-collapse5b" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading5b">
+                <div class="accordion-body">
+                    <div class="row text-center justify-content-center">
+                        <div class="col-3">
+                            <p>URL</p>
+                            <p>HTTP Method</p>
+                            <p>Request Body data</p>
+                            <p>Response Body data</p>
+                        </div>
+                        <div class="col-7">
+                            <p>/users</p>
+                            <p>GET</p>
+                            <p>None</p>
+                            <p>JSON object holding data about every user: <br>Array of: <code>{ _id: Number, Username: String, Password: String, Email: String, Birthday: Date, FavoriteMovies: [ref_id: 'Movies'] }</code></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-heading5c">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse5c" aria-expanded="false" aria-controls="panelsStayOpen-collapse5c">
+                        Retrieve data about one user by username
+            </button>
+            </h2>
+            <div id="panelsStayOpen-collapse5c" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading5c">
+                <div class="accordion-body">
+                    <div class="row text-center justify-content-center">
+                        <div class="col-3">
+                            <p>URL</p>
+                            <p>HTTP Method</p>
+                            <p>Request Body data</p>
+                            <p>Response Body data</p>
+                        </div>
+                        <div class="col-7">
+                            <p>/users/:username</p>
+                            <p>GET</p>
+                            <p>None</p>
+                            <p>JSON object holding data about one user: <br><code>{ _id: Number, Username: String, Password: String, Email: String, Birthday: Date, FavoriteMovies: [ref_id: 'Movies'] }</code></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-heading6">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse6" aria-expanded="false" aria-controls="panelsStayOpen-collapse6">
+                        Allow users to update their user info (username, password, email, date of birth)
+            </button>
+            </h2>
+            <div id="panelsStayOpen-collapse6" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading6">
+                <div class="accordion-body">
+                    <div class="row text-center justify-content-center">
+                        <div class="col-3">
+                            <p>URL</p>
+                            <p>HTTP Method</p>
+                            <p>Request Body data</p>
+                            <p>Response Body data</p>
+                        </div>
+                        <div class="col-7">
+                            <p>/users/:username/:newUsername</p>
+                            <p>PUT</p>
+                            <p>None</p>
+                            <p>JSON object holding data about the updated user: <br><code>{ _id: Number, Username: String, Password: String, Email: String, Birthday: Date, FavoriteMovies: [ref_id: 'Movies'] }</code>}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-heading7">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse7" aria-expanded="false" aria-controls="panelsStayOpen-collapse7">
+                        Allow users to add a movie to their list of favorites
+            </button>
+            </h2>
+            <div id="panelsStayOpen-collapse7" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading7">
+                <div class="accordion-body">
+                    <div class="row text-center justify-content-center">
+                        <div class="col-3">
+                            <p>URL</p>
+                            <p>HTTP Method</p>
+                            <p>Request Body data</p>
+                            <p>Response Body data</p>
+                        </div>
+                        <div class="col-7">
+                            <p>/users/:username/favourites/:movieID</p>
+                            <p>PUT</p>
+                            <p>None</p>
+                            <p>None</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-heading8">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse8" aria-expanded="false" aria-controls="panelsStayOpen-collapse8">
+                        Allow users to remove a movie from their list of favorites
+            </button>
+            </h2>
+            <div id="panelsStayOpen-collapse8" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading8">
+                <div class="accordion-body">
+                    <div class="row text-center justify-content-center">
+                        <div class="col-3">
+                            <p>URL</p>
+                            <p>HTTP Method</p>
+                            <p>Request Body data</p>
+                            <p>Response Body data</p>
+                        </div>
+                        <div class="col-7">
+                            <p>/users/:username/favourites/:movieID</p>
+                            <p>DELETE</p>
+                            <p>None</p>
+                            <p>None</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
 
 
         <footer class="footer my-4">
