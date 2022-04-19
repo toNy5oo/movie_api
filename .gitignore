@@ -1,6 +1,7 @@
 #Folders to ignore
 node_modules/
 log.txt
+db_credentials
 
 
 ## Ignore Visual Studio temporary files, build results, and
