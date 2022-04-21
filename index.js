@@ -1,6 +1,6 @@
-morgan = require('morgan');
-fs = require('fs');
-path = require('path');
+const morgan = require('morgan');
+const fs = require('fs');
+const path = require('path');
 
 const moviesRoutes = require('./routes/movies'),
     usersRoutes = require('./routes/users'),
@@ -16,9 +16,11 @@ const port = process.env.PORT || 8080;
 //ACCESS TO FS LOG.TXT
 const accessLogStream = fs.createWriteStream(path.join(__dirname, 'log.txt'), { flags: 'a' });
 
+const variables = require('./configs/env_variables');
+
 //DB CONNECTION
 //mongoose.connect('mongodb://localhost:27017/myFlixDB', { useNewUrlParser: true, useUnifiedTopology: true });
-mongoose.connect(process.env.CONNECTION_URI, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(variables.HEROKU_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 
 //Parsing Object als Json in Body
@@ -47,6 +49,11 @@ app.use(express.static('public'));
 //     console.error('Found an error: ' + err.message);
 //     res.status(err.code).send('Error!')
 // });
+
+app.get('/', (req, res) => {
+    console.log('redirecting');
+    res.redirect('./index');
+});
 
 //Server listening on hostname:port
 app.listen(port, hostname, () => {

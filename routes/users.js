@@ -27,7 +27,7 @@ router.route('/')
             });
     })
     //Allow new users to register
-    .post(passport.authenticate('jwt', { session: false }), (req, res) => {
+    .post((req, res) => {
 
         //minimum value of 5 characters are only allowed
         [
