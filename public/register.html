@@ -11,24 +11,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <title>myFlixDB API | Home</title>
+    <title>myFlixDB API | Create an account</title>
 </head>
 
 <body>
-
     <!-- navbar -->
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="navbar">
         <div class="container">
             <a class="navbar-brand" href="#">myFlixDB API</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
             <div class="collapse navbar-collapse" id="navbarsExample07">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="./documentation.html">Documentation</a>
@@ -36,70 +35,43 @@
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="https://github.com/toNy5oo/movie_api" target="_blank">Github</a>
                     </li>
-                    <!-- <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdown07" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
-                        <ul class="dropdown-menu" aria-labelledby="dropdown07">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li> -->
                 </ul>
-                <a class="btn btn-secondary m-3" href="./register.html">Create an account</a>
-                <a class="btn btn-primary" href="./login.html">Login</a>
+                <a class="btn btn-primary m-3" href="./login.html">Login</a>
 
             </div>
         </div>
     </nav>
 
-    <!-- Jumbotron -->
-
     <div class="container">
-        <div class="jumbotron py-3">
-            <div class="container">
-                <h1 class="display-4">Welcome to myFlixDB API</h1>
-                <p class="lead">This API has been written with the purpose of learning Node.js, REST, Express, MongoDB and Mongoose.</p>
-                <hr class="my-4">
-                <div class="d-flex-column justify-content-between align-items-baseline">
-                    <p class="my-4">The list of technologies used in this exercise are the following:</p>
-
-                    <div class="list-group">
-                        <a href="https://nodejs.org/it/" target="_blank" class="list-group-item list-group-item-action" aria-current="true">
-                            <h5 class="mb-2">Node.js</h5>
-                            <p class="mb-1">Javscript runtime built on V8 Chrome engine</p>
-                            <small class="text-muted">Click to know more</small>
-                        </a>
-                        <a href="https://restfulapi.net/" target="_blank" class="list-group-item list-group-item-action">
-                            <h5 class="mb-1">REST</h5>
-                            <p class="mb-1">REST is an acronym for REpresentational State Transfer and an architectural style for distributed hypermedia systems. Like other architectural styles, REST has its guiding principles and constraints. These principles must be
-                                satisfied if a service interface needs to be referred to as RESTful. </p>
-                            <small class="text-muted">Click to know more</small>
-                        </a>
-                        <a href="https://www.mongodb.com/" target="_blank" class="list-group-item list-group-item-action">
-                            <h5 class="mb-1">MongoDB</h5>
-                            <p class="mb-1">MongoDB is a NoSQL Database fast and secure.</p>
-                            <small class="text-muted">Click to know more</small>
-                        </a>
-                        <a href="https://mongoosejs.com/" target="_blank" class="list-group-item list-group-item-action">
-                            <h5 class="mb-1">Mongoose</h5>
-                            <p class="mb-1">Mongoose provides a straight-forward, schema-based solution to model your application data. It includes built-in type casting, validation, query building, business logic hooks and more, out of the box. </p>
-                            <small class="text-muted">Click to know more</small>
-                        </a>
-                        <a href="https://expressjs.com/" target="_blank" class="list-group-item list-group-item-action">
-                            <h5 class="mb-1">Express JS</h5>
-                            <p class="mb-1">Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.</p>
-                            <small class="text-muted">Click to know more</small>
-                        </a>
-                        <a href="https://www.passportjs.org/" target="_blank" class="list-group-item list-group-item-action">
-                            <h5 class="mb-1">Passport</h5>
-                            <p class="mb-1">Passport is an authentication middleware for Node.js and Express. It uses blocks of code called strategies to enable certain means of authentication and authorization multiple times throughout your application.</p>
-                            <small class="text-muted">Click to know more</small>
-                        </a>
+        <div class="row align-items-center g-lg-5 py-5">
+            <div class="col-lg-7 text-center text-lg-start">
+                <!-- <h1 class="display-4 fw-bold lh-1 mb-3">Login or create an account to use the API</h1> -->
+                <p class="col-lg-10 fs-4">An account will let you use the API services. If you don't have an account, you can create one clicking
+                    <a href="./register.html">here</a>.</p>
+            </div>
+            <div class="col-md-10 mx-auto col-lg-5">
+                <form class="p-4 p-md-5 border rounded-3 bg-light">
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">Email address</label>
                     </div>
-                </div>
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword">Password</label>
+                    </div>
+                    <div class="checkbox mb-3">
+                        <label>
+                <input type="checkbox" value="remember-me"> Remember me
+              </label>
+                    </div>
+                    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign up</button>
+                    <hr class="my-4">
+                    <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
+                </form>
             </div>
         </div>
     </div>
+
 
     <footer class="footer my-4">
         <div class="container-fluid d-flex justify-content-between align-items-center border-top">

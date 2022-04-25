@@ -1,8 +1,8 @@
 :root {
-    --primary-color: #AAD5D5;
-    --secondary-color: #AABFD5;
-    --terziary-color: #C6D4E3;
-    --background-color-grid: #E2E9F1;
+    --get-color: #6693fa;
+    --post-color: #aef1a2;
+    --put-color: #fbdaa3;
+    --delete-color: #ffa0a0;
     --background-color-grid: #E2E9F1;
 }
 
@@ -13,6 +13,22 @@
 body {
     font-family: 'Roboto', sans-serif;
     color: rgb(100, 98, 98);
+}
+
+.get {
+    background: rgba(84, 172, 255, 0.2);
+}
+
+.post {
+    background: rgba(153, 250, 174, 0.2);
+}
+
+.put {
+    background: rgba(248, 193, 130, 0.2);
+}
+
+.delete {
+    background: rgba(255, 90, 90, 0.2);
 }
 
 
