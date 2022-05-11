@@ -11,8 +11,9 @@ const Directors = Models.Director;
 
 require('../passport');
 
+//passport.authenticate('jwt', { session: false }),
 //Return a list of ALL movies to the user
-router.get('/', passport.authenticate('jwt', { session: false }), (req, res) => {
+router.get('/', (req, res) => {
     Movies.find()
         .then((movies) => res.json(movies))
         .catch((err) => {
