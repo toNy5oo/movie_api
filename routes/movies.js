@@ -23,7 +23,7 @@ router.get('/', (req, res) => {
 
 //Return data (description, genre, director, image URL, whether it’s featured or not) about a single movie by id
 router.get('/:movie_id', (req, res) => {
-    Movies.find({ _id: req.params.movie_id })
+    Movies.findById(req.params.movie_id)
         .then(movie => {
             console.log('Movie search ' + req.params._id);
             //Checking if the returned Object isn't empty
