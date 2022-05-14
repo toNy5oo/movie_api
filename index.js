@@ -4,6 +4,8 @@ const path = require('path');
 
 const moviesRoutes = require('./routes/movies'),
     usersRoutes = require('./routes/users'),
+    directorsRoutes = require('./routes/directors'),
+    genresRoutes = require('./routes/genres'),
     bodyParser = require('body-parser'),
     mongoose = require('mongoose'),
     express = require('express'),
@@ -42,6 +44,8 @@ app.use(morgan('combined', { stream: accessLogStream }));
 //Using the routes on separate files
 app.use('/movies', moviesRoutes);
 app.use('/users', usersRoutes);
+app.use('/directors', genresRoutes);
+app.use('/genres', directorsRoutes);
 
 app.use(express.static('public'));
 

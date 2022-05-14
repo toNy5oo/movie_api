@@ -6,13 +6,10 @@ const Models = require('../models.js');
 //Defining Documents variables from Database
 const Movies = Models.Movie;
 const Users = Models.User;
-const Genres = Models.Genre;
-const Directors = Models.Director;
 
 const { check, validationResult } = require('express-validator');
 
 require('../passport');
-
 
 router.route('/')
     //Retrieve all the users
