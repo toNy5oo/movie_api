@@ -44,8 +44,8 @@ app.use(morgan('combined', { stream: accessLogStream }));
 //Using the routes on separate files
 app.use('/movies', moviesRoutes);
 app.use('/users', usersRoutes);
-app.use('/directors', genresRoutes);
-app.use('/genres', directorsRoutes);
+app.use('/genres', genresRoutes);
+app.use('/directors', directorsRoutes);
 
 app.use(express.static('public'));
 
