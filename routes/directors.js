@@ -9,7 +9,7 @@ require('../passport');
 
 //passport.authenticate('jwt', { session: false }),
 //Return a list of ALL directors
-router.get('/', (req, res) => {
+router.get('/', passport.authenticate('jwt', { session: false }), (req, res) => {
     Directors.find()
         .then((directors) => res.json(directors))
         .catch((err) => {
@@ -18,7 +18,7 @@ router.get('/', (req, res) => {
 });
 
 //Return data (name, description) about a genre by id
-router.get('/:director_id', (req, res) => {
+router.get('/:director_id', passport.authenticate('jwt', { session: false }), (req, res) => {
     Directors.findById(req.params.director_id)
         .then(directors => {
             //Checking if the returned Object isn't empty

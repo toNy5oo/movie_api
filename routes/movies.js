@@ -1,6 +1,5 @@
 const router = require('express').Router();
 const passport = require('passport');
-const mongoose = require('mongoose');
 const Models = require('../models.js');
 
 //Defining Documents variables from Database
@@ -56,8 +55,5 @@ router.get('/:title/details', passport.authenticate('jwt', { session: false }), 
         .catch((err) => console.error(err));
 
 });
-
-
-
 
 module.exports = router;
