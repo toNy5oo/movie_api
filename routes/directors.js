@@ -27,4 +27,11 @@ router.get('/:director_id', (req, res) => {
         .catch((err) => res.status(500));
 });
 
+//Return data about a director (bio, birth year, death year) by name
+router.get('/:name', passport.authenticate('jwt', { session: false }), (req, res) => {
+    Directors.findOne({ Name: req.params.name })
+        .then((director) => { res.json(director); })
+        .catch((err) => console.error(err));
+});
+
 module.exports = router;

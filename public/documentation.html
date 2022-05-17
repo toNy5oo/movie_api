@@ -59,19 +59,13 @@
     <!-- HEADER -->
 
     <div class="container">
+
+
         <div class="card my-3">
             <div class="card-header">
                 Click on a sub-URI to see the detailed methods
             </div>
         </div>
-
-
-
-
-
-
-
-
 
         <!-- Accordion -->
 
@@ -84,23 +78,21 @@
                 </h2>
                 <div id="panelsStayOpen-collapse1" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading1">
                     <div class="accordion-body">
-
                         <div class="row row-cols-2 justify-content-center align-items-center border rounded my-2">
 
                             <!-- 1st method -->
 
-                            <div class="col-12 span-2 post d-flex rounded justify-content-center">
+                            <div class="col-12 span-2 post d-flex align-items-center justify-content-center">
                                 <button class="badge badge-pill badge-primary text-dark m-3" disabled>POST</button>
                                 <p class="text-dark m-3"><strong>/register</strong></p>
                                 <p class="text-dark m-3">Create a new account for a user</p>
 
                             </div>
 
-                            <div class="d-flex p-3 justify-content-center">
+                            <div class="d-flex p-3 justify-content-between align-content-between text-center">
                                 <div class="col">Request Body data </div>
                                 <div class="col">Response Body data</div>
                             </div>
-
                         </div>
 
 
@@ -133,7 +125,7 @@
         </div>
 
 
-
+        <!-- MOVIES -->
 
         <div class="accordion-item">
             <h2 class="accordion-header" id="panelsStayOpen-heading2">
@@ -144,16 +136,14 @@
             <div id="panelsStayOpen-collapse2" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading2">
                 <div class="accordion-body">
 
-
                     <!-- 1st method -->
-
 
                     <div class="row row-cols-2 justify-content-center align-items-center border rounded my-2">
 
                         <div class="col-12 span-2 get d-flex rounded justify-content-center">
                             <button class="badge badge-pill badge-primary text-dark m-3" disabled>GET</button>
                             <p class="text-dark m-3"><strong>/movies</strong></p>
-                            <p class="text-dark m-3">Return a list of all movies</p>
+                            <p class="text-dark m-3">Return the list of all movies</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-lock2 m-3" viewBox="0 0 16 16">
                                     <path d="M8 5a1 1 0 0 1 1 1v1H7V6a1 1 0 0 1 1-1zm2 2.076V6a2 2 0 1 0-4 0v1.076c-.54.166-1 .597-1 1.224v2.4c0 .816.781 1.3 1.5 1.3h3c.719 0 1.5-.484 1.5-1.3V8.3c0-.627-.46-1.058-1-1.224z"/>
                                     <path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"/>
@@ -179,7 +169,7 @@
 
                         <div class="col-12 span-2 get d-flex rounded justify-content-center">
                             <button class="badge badge-pill badge-primary text-dark m-3" disabled>GET</button>
-                            <p class="text-dark m-3"><strong>/movies/{title}</strong></p>
+                            <p class="text-dark m-3"><strong>/movies/:movie_id</strong></p>
                             <p class="text-dark m-3">Return data about a single movie by title to the user</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-lock2 m-3" viewBox="0 0 16 16">
                                     <path d="M8 5a1 1 0 0 1 1 1v1H7V6a1 1 0 0 1 1-1zm2 2.076V6a2 2 0 1 0-4 0v1.076c-.54.166-1 .597-1 1.224v2.4c0 .816.781 1.3 1.5 1.3h3c.719 0 1.5-.484 1.5-1.3V8.3c0-.627-.46-1.058-1-1.224z"/>
@@ -207,8 +197,8 @@
 
                         <div class="col-12 span-2 get d-flex rounded justify-content-center">
                             <button class="badge badge-pill badge-primary text-dark m-3" disabled>GET</button>
-                            <p class="text-dark m-3"><strong>/movies/directors/{name}</strong></p>
-                            <p class="text-dark m-3">Return data about a director by name</p>
+                            <p class="text-dark m-3"><strong>/movies/:title</strong></p>
+                            <p class="text-dark m-3">Return data about a movie by title</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-lock2 m-3" viewBox="0 0 16 16">
                                     <path d="M8 5a1 1 0 0 1 1 1v1H7V6a1 1 0 0 1 1-1zm2 2.076V6a2 2 0 1 0-4 0v1.076c-.54.166-1 .597-1 1.224v2.4c0 .816.781 1.3 1.5 1.3h3c.719 0 1.5-.484 1.5-1.3V8.3c0-.627-.46-1.058-1-1.224z"/>
                                     <path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"/>
@@ -236,7 +226,7 @@
 
                         <div class="col-12 span-2 get d-flex rounded justify-content-center">
                             <button class="badge badge-pill badge-primary text-dark m-3" disabled>GET</button>
-                            <p class="text-dark m-3"><strong>/movies</strong></p>
+                            <p class="text-dark m-3"><strong>/movies/title/details</strong></p>
                             <p class="text-dark m-3">Return a list of all movies</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-lock2 m-3" viewBox="0 0 16 16">
                                     <path d="M8 5a1 1 0 0 1 1 1v1H7V6a1 1 0 0 1 1-1zm2 2.076V6a2 2 0 1 0-4 0v1.076c-.54.166-1 .597-1 1.224v2.4c0 .816.781 1.3 1.5 1.3h3c.719 0 1.5-.484 1.5-1.3V8.3c0-.627-.46-1.058-1-1.224z"/>
@@ -263,7 +253,7 @@
 
                         <div class="col-12 span-2 get d-flex rounded justify-content-center">
                             <button class="badge badge-pill badge-primary text-dark m-3" disabled>GET</button>
-                            <p class="text-dark m-3"><strong>/movies/{title}</strong></p>
+                            <p class="text-dark m-3"><strong>/movies/:title</strong></p>
                             <p class="text-dark m-3">Return data about a single movie by title to the user</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-lock2 m-3" viewBox="0 0 16 16">
                                     <path d="M8 5a1 1 0 0 1 1 1v1H7V6a1 1 0 0 1 1-1zm2 2.076V6a2 2 0 1 0-4 0v1.076c-.54.166-1 .597-1 1.224v2.4c0 .816.781 1.3 1.5 1.3h3c.719 0 1.5-.484 1.5-1.3V8.3c0-.627-.46-1.058-1-1.224z"/>
@@ -283,16 +273,91 @@
                         </div>
 
                     </div>
+                </div>
+            </div>
+        </div>
 
 
-                    <!-- 6th method -->
+
+
+
+        <!-- USERS -->
+
+
+
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                        Users
+            </button>
+            </h2>
+            <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
+
+                <div class="accordion-body">
+                    <!-- 1st method -->
 
                     <div class="row row-cols-2 justify-content-center align-items-center border rounded my-2">
 
-                        <div class="col-12 span-2 post d-flex rounded justify-content-center">
-                            <button class="badge badge-pill badge-primary text-dark m-3" disabled>POST</button>
-                            <p class="text-dark m-3"><strong>/movies/{title}</strong></p>
-                            <p class="text-dark m-3">Return data about a genre by name/title (e.g., “Thriller”)</p>
+                        <div class="col-12 span-2 get d-flex rounded justify-content-center">
+                            <button class="badge badge-pill badge-primary text-dark m-3" disabled>GET</button>
+                            <p class="text-dark m-3"><strong>/users</strong></p>
+                            <p class="text-dark m-3">Return the list of all users</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-lock2 m-3" viewBox="0 0 16 16">
+                                    <path d="M8 5a1 1 0 0 1 1 1v1H7V6a1 1 0 0 1 1-1zm2 2.076V6a2 2 0 1 0-4 0v1.076c-.54.166-1 .597-1 1.224v2.4c0 .816.781 1.3 1.5 1.3h3c.719 0 1.5-.484 1.5-1.3V8.3c0-.627-.46-1.058-1-1.224z"/>
+                                    <path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"/>
+                                  </svg>
+                        </div>
+
+                        <div class="d-flex p-3 justify-content-center">
+                            <div class="col">
+                                <p>Request Body data</p>
+                                <p>None</p>
+                            </div>
+                            <div class="col">
+                                <p>Response Body data</p>
+                                <p>JSON object holding data about all the movies: Array of: <br><code>{_id: Number, Title: String, Description: String, Genre: [ref_id: 'Genres'], Director: ref_id: 'Directors', Actors: [String], ImagePath: String, Featured: Boolean }</code></p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- 2nd method -->
+
+                    <div class="row row-cols-2 justify-content-center align-items-center border rounded my-2">
+
+                        <div class="col-12 span-2 get d-flex rounded justify-content-center">
+                            <button class="badge badge-pill badge-primary text-dark m-3" disabled>GET</button>
+                            <p class="text-dark m-3"><strong>/users/:username</strong></p>
+                            <p class="text-dark m-3">Return data of a user by username</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-lock2 m-3" viewBox="0 0 16 16">
+                                    <path d="M8 5a1 1 0 0 1 1 1v1H7V6a1 1 0 0 1 1-1zm2 2.076V6a2 2 0 1 0-4 0v1.076c-.54.166-1 .597-1 1.224v2.4c0 .816.781 1.3 1.5 1.3h3c.719 0 1.5-.484 1.5-1.3V8.3c0-.627-.46-1.058-1-1.224z"/>
+                                    <path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"/>
+                                  </svg>
+                        </div>
+                        <div class="d-flex p-3 justify-content-center">
+                            <div class="col">
+                                <p>Request Body data</p>
+                                <p>None</p>
+                            </div>
+                            <div class="col">
+
+                                <p>Response Body data</p>
+                                <p>JSON object holding data about one movie: <br><code>{_id: Number, Title: String, Description: String, Genre: [ref_id: 'Genres'], Director: ref_id: 'Directors', Actors: [String], ImagePath: String, Featured: Boolean }</code></p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- 3rd method -->
+
+                    <div class="row row-cols-2 justify-content-center align-items-center border rounded my-2">
+
+                        <div class="col-12 span-2 delete d-flex rounded justify-content-center">
+                            <button class="badge badge-pill badge-primary text-dark m-3" disabled>DELETE</button>
+                            <p class="text-dark m-3"><strong>/users/:title</strong></p>
+                            <p class="text-dark m-3">Return ata of a user by title</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-lock2 m-3" viewBox="0 0 16 16">
                                     <path d="M8 5a1 1 0 0 1 1 1v1H7V6a1 1 0 0 1 1-1zm2 2.076V6a2 2 0 1 0-4 0v1.076c-.54.166-1 .597-1 1.224v2.4c0 .816.781 1.3 1.5 1.3h3c.719 0 1.5-.484 1.5-1.3V8.3c0-.627-.46-1.058-1-1.224z"/>
                                     <path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"/>
@@ -313,44 +378,62 @@
                     </div>
 
 
+                    <!-- 4th method -->
 
 
-                </div>
-            </div>
-        </div>
+                    <div class="row row-cols-2 justify-content-center align-items-center border rounded my-2">
 
-
-
-
-
-
-
-
-
-
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="panelsStayOpen-headingFour">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
-                        Return data about a director by name
-            </button>
-            </h2>
-            <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
-                <div class="accordion-body">
-                    <div class="row text-center justify-content-center">
-                        <div class="col-3">
-                            <p>URL</p>
-                            <p>HTTP Method</p>
-                            <p>Request Body data</p>
-                            <p>Response Body data</p>
+                        <div class="col-12 span-2 put d-flex rounded justify-content-center">
+                            <button class="badge badge-pill badge-primary text-dark m-3" disabled>PUT</button>
+                            <p class="text-dark m-3"><strong>users/:user/favs/:movie_id</strong></p>
+                            <p class="text-dark m-3">Add the movie to the list of favourites</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-lock2 m-3" viewBox="0 0 16 16">
+                                    <path d="M8 5a1 1 0 0 1 1 1v1H7V6a1 1 0 0 1 1-1zm2 2.076V6a2 2 0 1 0-4 0v1.076c-.54.166-1 .597-1 1.224v2.4c0 .816.781 1.3 1.5 1.3h3c.719 0 1.5-.484 1.5-1.3V8.3c0-.627-.46-1.058-1-1.224z"/>
+                                    <path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"/>
+                                  </svg>
                         </div>
-                        <div class="col-7">
-                            <p>/movies/directors/:name</p>
-                            <p>GET</p>
-                            <p>None</p>
 
+                        <div class="d-flex p-3 justify-content-center">
+                            <div class="col">
+                                <p>Request Body data</p>
+                                <p>None</p>
+                            </div>
+                            <div class="col">
+                                <p>Response Body data</p>
+                                <p>JSON object holding data about one director: <br><code>{_id: Number, Name: String, Bio: String }</code></p>
+                            </div>
                         </div>
+
+                    </div>
+
+                    <!-- 5th method -->
+
+                    <div class="row row-cols-2 justify-content-center align-items-center border rounded my-2">
+
+                        <div class="col-12 span-2 delete d-flex rounded justify-content-center">
+                            <button class="badge badge-pill badge-primary text-dark m-3" disabled>DELETE</button>
+                            <p class="text-dark m-3"><strong>/users/:user/favs/:movie_id</strong></p>
+                            <p class="text-dark m-3">Remove the movie to the list of favourites</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-lock2 m-3" viewBox="0 0 16 16">
+                                    <path d="M8 5a1 1 0 0 1 1 1v1H7V6a1 1 0 0 1 1-1zm2 2.076V6a2 2 0 1 0-4 0v1.076c-.54.166-1 .597-1 1.224v2.4c0 .816.781 1.3 1.5 1.3h3c.719 0 1.5-.484 1.5-1.3V8.3c0-.627-.46-1.058-1-1.224z"/>
+                                    <path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"/>
+                                  </svg>
+                        </div>
+
+                        <div class="d-flex p-3 justify-content-center">
+                            <div class="col">
+                                <p>Request Body data</p>
+                                <p>None</p>
+                            </div>
+                            <div class="col">
+                                <p>Response Body data</p>
+                                <p>JSON object holding data about one movie: <br><code>{_id: Number, Title: String, Description: String, Genre: [ref_id: 'Genres'], Director: ref_id: 'Directors', Actors: [String], ImagePath: String, Featured: Boolean }</code></p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
+
             </div>
         </div>
 
@@ -359,70 +442,158 @@
         <div class="accordion-item">
             <h2 class="accordion-header" id="panelsStayOpen-heading5">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse5" aria-expanded="false" aria-controls="panelsStayOpen-collapse5">
-                        Allow new users to register
+                        Directors
             </button>
             </h2>
             <div id="panelsStayOpen-collapse5" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading5">
                 <div class="accordion-body">
-                    <div class="row text-center justify-content-center">
-                        <div class="col-3 my-3">
-                            <p>URL</p>
-                            <p>HTTP Method</p>
-                            <p>Request Body data</p>
-                            <p>Response Body data</p>
+                    <div class="row row-cols-2 justify-content-center align-items-center border rounded my-2">
+
+                        <div class="col-12 span-2 get d-flex rounded justify-content-center">
+                            <button class="badge badge-pill badge-primary text-dark m-3" disabled>GET</button>
+                            <p class="text-dark m-3"><strong>/directors</strong></p>
+                            <p class="text-dark m-3">Return the list of all directors</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-lock2 m-3" viewBox="0 0 16 16">
+                                    <path d="M8 5a1 1 0 0 1 1 1v1H7V6a1 1 0 0 1 1-1zm2 2.076V6a2 2 0 1 0-4 0v1.076c-.54.166-1 .597-1 1.224v2.4c0 .816.781 1.3 1.5 1.3h3c.719 0 1.5-.484 1.5-1.3V8.3c0-.627-.46-1.058-1-1.224z"/>
+                                    <path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"/>
+                                  </svg>
                         </div>
-                        <div class="col-7 my-3">
-                            <p>/users</p>
-                            <p>POST</p>
-                            <p>JSON object containing the following values:
-                                <code>
-                                    { 
-                                    <strong>Username</strong>: String,
-                                    <strong>Password</strong>: String,
-                                    <strong>Email</strong>: String,
-                                    Birthday: Date,
-                                    FavoriteMovies: [ref_id: 'Movie'] }
-                                    </code>
-                            </p>
-                            <p>JSON object created with the user data: <br> <code>{ _id: Number, Username: String, Password: String, Email: String, Birthday: Date, FavoriteMovies: [ref_id: 'Movie'] }</code>
-                            </p>
+
+                        <div class="d-flex p-3 justify-content-center">
+                            <div class="col">
+                                <p>Request Body data</p>
+                                <p>None</p>
+                            </div>
+                            <div class="col">
+                                <p>Response Body data</p>
+                                <p>JSON object holding data about all the movies: Array of: <br><code>{_id: Number, Title: String, Description: String, Genre: [ref_id: 'Genres'], Director: ref_id: 'Directors', Actors: [String], ImagePath: String, Featured: Boolean }</code></p>
+                            </div>
                         </div>
+
                     </div>
-                    <div class="row">
-                        <div class="col text-end mx-3">In bold the required fields</div>
+
+                    <!-- 2nd method -->
+
+                    <div class="row row-cols-2 justify-content-center align-items-center border rounded my-2">
+
+                        <div class="col-12 span-2 get d-flex rounded justify-content-center">
+                            <button class="badge badge-pill badge-primary text-dark m-3" disabled>GET</button>
+                            <p class="text-dark m-3"><strong>/directors/:director_id</strong></p>
+                            <p class="text-dark m-3">Return the list of a specific director by id</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-lock2 m-3" viewBox="0 0 16 16">
+                                    <path d="M8 5a1 1 0 0 1 1 1v1H7V6a1 1 0 0 1 1-1zm2 2.076V6a2 2 0 1 0-4 0v1.076c-.54.166-1 .597-1 1.224v2.4c0 .816.781 1.3 1.5 1.3h3c.719 0 1.5-.484 1.5-1.3V8.3c0-.627-.46-1.058-1-1.224z"/>
+                                    <path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"/>
+                                  </svg>
+                        </div>
+                        <div class="d-flex p-3 justify-content-center">
+                            <div class="col">
+                                <p>Request Body data</p>
+                                <p>None</p>
+                            </div>
+                            <div class="col">
+
+                                <p>Response Body data</p>
+                                <p>JSON object holding data about one movie: <br><code>{_id: Number, Title: String, Description: String, Genre: [ref_id: 'Genres'], Director: ref_id: 'Directors', Actors: [String], ImagePath: String, Featured: Boolean }</code></p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row row-cols-2 justify-content-center align-items-center border rounded my-2">
+
+                        <div class="col-12 span-2 get d-flex rounded justify-content-center">
+                            <button class="badge badge-pill badge-primary text-dark m-3" disabled>GET</button>
+                            <p class="text-dark m-3"><strong>/directors/:name</strong></p>
+                            <p class="text-dark m-3">Return a specific director by name</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-lock2 m-3" viewBox="0 0 16 16">
+                                    <path d="M8 5a1 1 0 0 1 1 1v1H7V6a1 1 0 0 1 1-1zm2 2.076V6a2 2 0 1 0-4 0v1.076c-.54.166-1 .597-1 1.224v2.4c0 .816.781 1.3 1.5 1.3h3c.719 0 1.5-.484 1.5-1.3V8.3c0-.627-.46-1.058-1-1.224z"/>
+                                    <path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"/>
+                                  </svg>
+                        </div>
+                        <div class="d-flex p-3 justify-content-center">
+                            <div class="col">
+                                <p>Request Body data</p>
+                                <p>None</p>
+                            </div>
+                            <div class="col">
+
+                                <p>Response Body data</p>
+                                <p>JSON object holding data about one movie: <br><code>{_id: Number, Title: String, Description: String, Genre: [ref_id: 'Genres'], Director: ref_id: 'Directors', Actors: [String], ImagePath: String, Featured: Boolean }</code></p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
+
+
+        <!-- GENRES -->
 
         <div class="accordion-item">
             <h2 class="accordion-header" id="panelsStayOpen-heading9">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse9" aria-expanded="false" aria-controls="panelsStayOpen-collapse9">
-                        Allow existing users to deregister
+                        Genres
             </button>
             </h2>
             <div id="panelsStayOpen-collapse9" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading9">
                 <div class="accordion-body">
-                    <div class="row text-center justify-content-center">
-                        <div class="col-3">
-                            <p>URL</p>
-                            <p>HTTP Method</p>
-                            <p>Request Body data</p>
-                            <p>Response Body data</p>
+                    <div class="row row-cols-2 justify-content-center align-items-center border rounded my-2">
+
+                        <div class="col-12 span-2 get d-flex rounded justify-content-center">
+                            <button class="badge badge-pill badge-primary text-dark m-3" disabled>GET</button>
+                            <p class="text-dark m-3"><strong>/genres</strong></p>
+                            <p class="text-dark m-3">Return the list of all directors</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-lock2 m-3" viewBox="0 0 16 16">
+                                    <path d="M8 5a1 1 0 0 1 1 1v1H7V6a1 1 0 0 1 1-1zm2 2.076V6a2 2 0 1 0-4 0v1.076c-.54.166-1 .597-1 1.224v2.4c0 .816.781 1.3 1.5 1.3h3c.719 0 1.5-.484 1.5-1.3V8.3c0-.627-.46-1.058-1-1.224z"/>
+                                    <path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"/>
+                                  </svg>
                         </div>
-                        <div class="col-7">
-                            <p>/users/:username</p>
-                            <p>DELETE</p>
-                            <p>None</p>
-                            <p>None</p>
+
+                        <div class="d-flex p-3 justify-content-center">
+                            <div class="col">
+                                <p>Request Body data</p>
+                                <p>None</p>
+                            </div>
+                            <div class="col">
+                                <p>Response Body data</p>
+                                <p>JSON object holding data about all the movies: Array of: <br><code>{_id: Number, Title: String, Description: String, Genre: [ref_id: 'Genres'], Director: ref_id: 'Directors', Actors: [String], ImagePath: String, Featured: Boolean }</code></p>
+                            </div>
                         </div>
+
+                    </div>
+
+                    <!-- 2nd method -->
+
+                    <div class="row row-cols-2 justify-content-center align-items-center border rounded my-2">
+
+                        <div class="col-12 span-2 get d-flex rounded justify-content-center">
+                            <button class="badge badge-pill badge-primary text-dark m-3" disabled>GET</button>
+                            <p class="text-dark m-3"><strong>/genres/:genre_id</strong></p>
+                            <p class="text-dark m-3">Return the list of a specific director by id</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-lock2 m-3" viewBox="0 0 16 16">
+                                    <path d="M8 5a1 1 0 0 1 1 1v1H7V6a1 1 0 0 1 1-1zm2 2.076V6a2 2 0 1 0-4 0v1.076c-.54.166-1 .597-1 1.224v2.4c0 .816.781 1.3 1.5 1.3h3c.719 0 1.5-.484 1.5-1.3V8.3c0-.627-.46-1.058-1-1.224z"/>
+                                    <path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"/>
+                                  </svg>
+                        </div>
+                        <div class="d-flex p-3 justify-content-center">
+                            <div class="col">
+                                <p>Request Body data</p>
+                                <p>None</p>
+                            </div>
+                            <div class="col">
+
+                                <p>Response Body data</p>
+                                <p>JSON object holding data about one movie: <br><code>{_id: Number, Title: String, Description: String, Genre: [ref_id: 'Genres'], Director: ref_id: 'Directors', Actors: [String], ImagePath: String, Featured: Boolean }</code></p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
 
 
-        <div class="accordion-item">
+        <!-- <div class="accordion-item">
             <h2 class="accordion-header" id="panelsStayOpen-heading5b">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse5b" aria-expanded="false" aria-controls="panelsStayOpen-collapse5b">
                         Retrieve all existing users
@@ -446,10 +617,10 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
 
-        <div class="accordion-item">
+        <!-- <div class="accordion-item">
             <h2 class="accordion-header" id="panelsStayOpen-heading5c">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse5c" aria-expanded="false" aria-controls="panelsStayOpen-collapse5c">
                         Retrieve data about one user by username
@@ -560,7 +731,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
 
 

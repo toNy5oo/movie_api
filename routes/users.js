@@ -118,7 +118,7 @@ router.put('/:username/:newUsername', passport.authenticate('jwt', { session: fa
 });
 
 
-router.route('/:username/favourites/:movieID')
+router.route('/:username/favs/:movieID')
     // //Allow users to add a movie to their list of favorites (showing only a text that a movie has been added—more on this later)
     .put(passport.authenticate('jwt', { session: false }), (req, res) => {
         Users.findOneAndUpdate({ Username: req.params.username }, { $addToSet: { FavoriteMovies: req.params.movieID } }, { new: true },
