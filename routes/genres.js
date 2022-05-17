@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const Models = require('../models.js');
-
-//Defining Documents variables from Database
+const passport = require('passport')
+    //Defining Documents variables from Database
 const Genres = Models.Genre;
 
 require('../passport');

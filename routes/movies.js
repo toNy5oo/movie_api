@@ -6,7 +6,6 @@ const Models = require('../models.js');
 //Defining Documents variables from Database
 const Movies = Models.Movie;
 const Genres = Models.Genre;
-const Directors = Models.Director;
 
 require('../passport');
 
