@@ -18,7 +18,8 @@ module.exports = (router) => {
             if (error || !user) {
                 return res.status(400).json({
                     message: 'Something is wrong: ' + error,
-                    user: user
+                    user: user,
+                    info: info
                 });
             }
             req.login(user, { session: false }, (error) => {
