@@ -101,12 +101,12 @@ router.route('/:username')
 //Allow users to update their user info (username)
 router.put('/:username/update', passport.authenticate('jwt', { session: false }), (req, res) => {
     const updatedUser = {
-        Username: req.body.username,
-        Email: req.body.email,
-        Birthday: req.body.birthday,
+        Username: req.body.Username,
+        Email: req.body.Email,
+        Birthday: req.body.Birthday
     };
     if (req.body.password) {
-        updatedUser.Password = Users.hashPassword(req.body.password);
+        updatedUser.Password = Users.hashPassword(req.body.Password);
     }
     Users.findOneAndUpdate({ Username: req.params.username }, { $set: updatedUser }, { new: true }).then((user) => {
         if (!user) {
