@@ -10,7 +10,7 @@ require('../passport');
 
 //passport.authenticate('jwt', { session: false }),
 //Return a list of ALL movies to the user
-router.get('/', (req, res) => {
+router.get('/', passport.authenticate('jwt', { session: false }), (req, res) => {
     Movies.find()
         .then((movies) => res.json(movies))
         .catch((err) => {
@@ -19,7 +19,7 @@ router.get('/', (req, res) => {
 });
 
 //Return data (description, genre, director, image URL, whether it’s featured or not) about a single movie by id
-router.get('/:movie_id', (req, res) => {
+router.get('/:movie_id', passport.authenticate('jwt', { session: false }), (req, res) => {
     Movies.findById(req.params.movie_id)
         .then(movie => {
             console.log('Movie search ' + req.params._id);

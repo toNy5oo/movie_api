@@ -9,7 +9,7 @@ require('../passport');
 
 //passport.authenticate('jwt', { session: false }),
 //Return a list of ALL genres
-router.get('/', (req, res) => {
+router.get('/', passport.authenticate('jwt', { session: false }), (req, res) => {
     Genres.find()
         .then((genres) => res.json(genres))
         .catch((err) => {
@@ -18,7 +18,7 @@ router.get('/', (req, res) => {
 });
 
 //Return data (name, description) about a genre by id
-router.get('/:genre_id', (req, res) => {
+router.get('/:genre_id', passport.authenticate('jwt', { session: false }), (req, res) => {
     Genres.findById(req.params.genre_id)
         .then(genres => {
             //Checking if the returned Object isn't empty

@@ -99,17 +99,22 @@ router.route('/:username')
     });
 
 //Allow users to update their user info (username)
-router.put('/:username/:newUsername', passport.authenticate('jwt', { session: false }), (req, res) => {
-    Users.findOne({ Username: req.params.username }).then((user) => {
+router.put('/:username/update', passport.authenticate('jwt', { session: false }), (req, res) => {
+    const updatedUser = {
+        Username: req.body.username,
+        Email: req.body.email,
+        Birthday: req.body.birthday,
+    };
+    if (req.body.password) {
+        updatedUser.Password = Users.hashPassword(req.body.password);
+    }
+    Users.findOneAndUpdate({ Username: req.params.username }, { $set: updatedUser }, { new: true }).then((user) => {
         if (!user) {
             return res.status(400).send("The user " + req.params.username + " doesn't exists.");
         } else {
-            user.updateOne({ Username: req.params.newUsername }).then((user) => {
-                res.status(201).json(user)
-            }).catch((err) => {
-                console.error(err);
-                res.status(500).send('Error: ' + err);
-            })
+            const userObjWithouPwd = updatedUser;
+            delete userObjWithouPwd.Password;
+            res.json(userObjWithouPwd); // Return json object of updatedUser
         }
     }).catch((err) => {
         console.error(error);
