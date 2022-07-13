@@ -497,3 +497,6 @@
 127.0.0.1 - - [21/Apr/2022:19:25:31 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36"
 127.0.0.1 - - [21/Apr/2022:19:25:31 +0000] "GET /public/css/style.css HTTP/1.1" 404 159 "http://localhost:8080/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36"
 127.0.0.1 - - [21/Apr/2022:19:25:31 +0000] "GET /public/css/style.css HTTP/1.1" 404 159 "http://localhost:8080/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36"
+127.0.0.1 - - [21/May/2022:16:55:37 +0000] "GET / HTTP/1.1" 200 9840 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36"
+127.0.0.1 - - [21/May/2022:16:55:37 +0000] "GET /css/style.css HTTP/1.1" 200 1127 "http://127.0.0.1:8080/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36"
+127.0.0.1 - - [21/May/2022:16:55:38 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://127.0.0.1:8080/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36"
